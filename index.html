@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="initial-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<title>Corona Map Tracker</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="css/index.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""
+		></script>
+	</head>
+
+	<body>
+		
+		<header class="header">
+			<nav class="navbar navbar-expand-lg fixed-top py-3  ">
+				<div class="container">
+					<a
+						href="#"
+						class="navbar-brand text-uppercase font-weight-bold d mx-auto"
+						style="color:gold;"
+						>Corona Tracker</a
+					>
+					<br /><br />
+					<button
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+						class="navbar-toggler navbar-toggler-right"
+					>
+						<i class="fa fa-bars"></i>
+					</button>
+
+					
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Background video -->
+		<div class="video-background-holder" id="home">
+			<div class="video-background-overlay"></div>
+
+			<div class="video-background-content container h-100">
+				<div class="d-flex h-100 text-center align-items-center">
+					<div class="w-100 text-white">
+						<h1 class="display-3">Track the evolution of the COVID-19</h1>
+						<h3 class="lead mb-0">Please Log in to continue.</h3>
+
+						<div class="wrapper fadeInDown">
+							<div id="formContent">
+								<div class="fadeIn first">
+									<h1></h1>
+								</div>
+
+								<form action="map.html" method="">
+									<p
+										class="h4 mb-4 underlineHover"
+										style="font-family:'Noto Sans',sans-serif; color:black;"
+									>
+										Corona Tracker
+									</p>
+									<input
+										type="text"
+										id="login"
+										class="fadeIn second"
+										name="nom"
+										placeholder="identifiant"
+									/>
+									<input
+										type="password"
+										id="password"
+										class="fadeIn third"
+										name="mdp"
+										placeholder="mot de passe"
+									/>
+									<input
+										type="submit"
+										class="fadeIn fourth"
+										id="btn_connect"
+										value="Se connecter"
+									/>
+								</form>
+
+								<div id="formFooter">
+									<a class="underlineHover" href="#">Mot de passe oublié?</a>
+								</div>
+							</div>
+						</div>
+
+						<section class="header-down-arrow">
+							<a href="#about" style="color:white;"
+								><i class="fa fa-angle-double-down fa-5x"></i
+							></a>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap Static Header -->
+		<section id='about'>
+			<div
+				style="background: url(https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80);
+				background-size:cover;
+				height: 100vh;"
+				class="jumbotron bg-cover text-white">
+
+				<div class="container py-5 text-center">
+					<h1 class="display-4 font-weight-bold" style="margin-top: 30vh;">
+						The Coronavirus App
+					</h1>
+						<p class="lead font-italic mb-0">
+							The real OG
+						</p>
+			
+					
+					<a href="https://coronavirus.app/" role="button" class="btn btn-primary px-5"
+					>See All Features</a>
+				</div>
+			</div>
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"
+	></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
