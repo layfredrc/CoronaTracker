@@ -1,10 +1,87 @@
-html,
 body {
-	padding: 0;
 	margin: 0;
 }
-
 #map {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
+}
+
+.wrapper {
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.statistic {
+	width: 100%;
+}
+
+.total_case_box {
+	background-color: #fafafa;
+	box-shadow: 2px 2px 8px rgba(30, 30, 30, 0.2);
+	margin: 10px 15px;
+	padding: 15px 0;
+	border-radius: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+}
+.total_case_box p {
+	font-size: 3rem;
+	font-family: "Montserrat", sans-serif;
+}
+.wrapper .box_wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	font-family: "Montserrat", sans-serif;
+}
+
+.box_wrapper .box {
+	background-color: #fafafa;
+	box-shadow: 2px 2px 8px rgba(30, 30, 30, 0.2);
+	margin: 10px 15px;
+	width: 25%;
+	text-align: center;
+	padding: 15px 0;
+	border-radius: 30px;
+
+	font-family: "Montserrat", sans-serif;
+}
+.box_wrapper .box p {
+	font-size: 2.5rem;
+	font-family: "Montserrat", sans-serif;
+}
+
+/*Styiling the table*/
+table {
+	width: 100%;
+	padding: 15px 10px;
+	margin: 10px 0;
+	text-align: center;
+	border-spacing: 0;
+	font-family: "Montserrat", sans-serif;
+}
+tr:first-child {
+	background-color: #574f76;
+	color: #fafafa;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+}
+th {
+	padding: 15px 0;
+	border: none;
+	border-spacing: 0;
+	font-family: "Montserrat", sans-serif;
+}
+tr:nth-child(even) {
+	background-color: #fafafa;
+	font-family: "Montserrat", sans-serif;
+}
+tr:nth-child(odd) {
+	font-family: "Montserrat", sans-serif;
+}
+tr td {
+	padding: 15px 0;
+	font-family: "Montserrat", sans-serif;
 }
