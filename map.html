@@ -21,7 +21,14 @@
 			href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap"
 			rel="stylesheet"
 		/>
+
 		<link rel="stylesheet" href="css/map.css" />
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
 	</head>
 	<body>
 		<div id="map"></div>
@@ -79,5 +86,37 @@
 			crossorigin="anonymous"
 		></script>
 		<script type="module" src="js/map.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyDb-Vj_8Ej21Eul6p878XHWmpBe5XNBnAc",
+				authDomain: "coronatracker-67aae.firebaseapp.com",
+				databaseURL: "https://coronatracker-67aae.firebaseio.com",
+				projectId: "coronatracker-67aae",
+				storageBucket: "coronatracker-67aae.appspot.com",
+				messagingSenderId: "804146612879",
+				appId: "1:804146612879:web:80a8d5440768df9a7e3efa",
+				measurementId: "G-RN7ZVMWYCG"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			const auth = firebase.auth();
+
+			auth.onAuthStateChanged(function(user) {
+				if (user) {
+					var email = user.email;
+					alert("Active User " + email);
+					var connected = true;
+
+					//Take user to a different or home page
+
+					//is signed in
+				} else {
+					alert("No Active User");
+					//no user is signed in
+				}
+			});
+		</script>
 	</body>
 </html>

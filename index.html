@@ -22,17 +22,12 @@
 		/>
 		<link rel="stylesheet" href="css/index.css" />
 
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-			crossorigin=""
-		/>
-		<script
-			src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-			crossorigin=""
-		></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
 	</head>
 
 	<body>
@@ -81,16 +76,16 @@
 									<h1></h1>
 								</div>
 
-								<form action="map.html" method="">
+								<div>
 									<p
 										class="h4 mb-4 underlineHover"
 										style="font-family:'Noto Sans',sans-serif; color:black;"
 									>
-										Corona Tracker
+										Corona Tracker 
 									</p>
 									<input
-										type="text"
-										id="login"
+										type="email"
+										id="email"
 										class="fadeIn second"
 										name="nom"
 										placeholder="identifiant"
@@ -102,13 +97,29 @@
 										name="mdp"
 										placeholder="mot de passe"
 									/>
-									<input
-										type="submit"
+									<button
+										onclick="signIn()"
 										class="fadeIn fourth"
 										id="btn_connect"
 										value="Se connecter"
-									/>
-								</form>
+
+									>Se connecter</button>
+
+									<button
+										onclick="signUp()"
+										class="fadeIn fourth"
+										id="btn_signUp"
+										value="S'inscrire'"
+									>S'inscrire</button>
+
+									
+									<button
+										onclick="signOut()"
+										class="fadeIn fourth"
+										id="btn_signOut"
+										value="Se déconnecter"
+									>Deconnexion</button>
+								</div>
 
 								<div id="formFooter">
 									<a class="underlineHover" href="#">Mot de passe oublié?</a>
